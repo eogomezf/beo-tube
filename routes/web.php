@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Video;
 
 Route::get('/', function () {
+    $videos = Video::all();
+    foreach($videos as $video){
+        var_dump($video);
+    }
     return view('welcome');
 });

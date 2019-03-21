@@ -13,9 +13,9 @@
 use App\Video;
 
 Route::get('/', function () {
-    $videos = Video::all();
-    foreach($videos as $video){
-        var_dump($video);
-    }
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

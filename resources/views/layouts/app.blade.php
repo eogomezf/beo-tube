@@ -36,6 +36,15 @@
                         <li><a href="{{ url('/home')}} ">Inicio</a></li>
                     </ul>
 
+                    <form class="navbar-form navbar-nav" role="search" action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Que deseas buscar?" name="search" />
+                        </div>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -49,6 +58,9 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a href="#">Subir Video</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
